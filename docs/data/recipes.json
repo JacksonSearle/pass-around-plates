@@ -41,6 +41,55 @@
  },
  "recipes": [
   {
+   "slug": "creamy-tuscan-garlic-chicken",
+   "title": "Creamy Tuscan Garlic Chicken",
+   "from": [
+    "Ashley"
+   ],
+   "postedBy": "JacksonSearle",
+   "date": "2026-10-16",
+   "updated": "2026-10-16T19:09:02.440Z",
+   "categories": [
+    "Dinner",
+    "Chicken"
+   ],
+   "makes": "6 servings",
+   "ingredients": [
+    {
+     "heading": null,
+     "items": [
+      "2 Tbsp olive oil",
+      "1½ lb thinly sliced boneless skinless chicken breasts",
+      "1 cup heavy cream",
+      "½ cup chicken broth",
+      "1 tsp garlic powder",
+      "1 tsp italian seasoning",
+      "½ cup grated parmesan cheese",
+      "1 cup chopped spinach",
+      "½ cup drained julienned sun dried tomatoes"
+     ]
+    }
+   ],
+   "steps": [
+    {
+     "heading": null,
+     "items": [
+      "In a large skillet over medium high heat, add 2 Tbsp olive oil. Cook the 1½ lb thinly sliced boneless skinless chicken breasts 3-4 minutes on each side until cooked through to 165°F. Remove the chicken and set aside on a plate.",
+      "Add 1 cup heavy cream, ½ cup chicken broth, 1 tsp garlic powder, 1 tsp italian seasoning, and ½ cup grated parmesan cheese to the skillet. Whisk over medium-high heat until it starts to thicken about 4-5 minutes.",
+      "Add the 1 cup chopped spinach and ½ cup drained julienned sun dried tomatoes and continue to cook 1-2 minutes until the spinach starts to wilt. Add the chicken back to the pan until heated through and serve over pasta if desired."
+     ]
+    }
+   ],
+   "tips": [
+    "I've made this with fresh tomatoes, frozen spinach, served with potatoes, served over pasta or gnocchi, its pretty versatile! I've also subbed the heavy cream for regular milk or blended cottage cheese"
+   ],
+   "notes": [
+    "https://therecipecritic.com/creamy-tuscan-garlic-chicken/"
+   ],
+   "images": [],
+   "original": ""
+  },
+  {
    "slug": "piping-buttercream-frosting",
    "title": "Piping Buttercream Frosting",
    "from": [
