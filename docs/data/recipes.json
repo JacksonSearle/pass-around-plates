@@ -41,6 +41,52 @@
  },
  "recipes": [
   {
+   "slug": "italian-grinder-salad",
+   "title": "Italian Grinder Salad",
+   "from": [
+    "Ashley"
+   ],
+   "postedBy": "JacksonSearle",
+   "date": "2026-10-16",
+   "updated": "2026-10-16T19:39:51.609Z",
+   "categories": [
+    "Dinner",
+    "Salads",
+    "Quick & Easy"
+   ],
+   "makes": "",
+   "ingredients": [
+    {
+     "heading": null,
+     "items": [
+      "For the Dressing",
+      "1/2 cup mayonnaise",
+      "1 Tbsp red wine vinegar",
+      "1/2 tsp salt",
+      "1/2 tsp red pepper flakes",
+      "1 tsp Italian seasonings",
+      "1 tsp oregano",
+      "For the Salad",
+      "1/2 head of iceberg lettuce",
+      "1/2 cup cherry tomatoes, sliced",
+      "1/4 red onion, sliced or chopped",
+      "1/3 cup banana peppers or peperoncini, chopped",
+      "1/2 cup chopped deli meat of choice (I used salami and turkey)",
+      "1/2 cup cheese of choice (parmesan, smoked cheddar, mozzarella pearls, or provolone work well)"
+     ]
+    }
+   ],
+   "steps": [],
+   "tips": [
+    "I used this as a dressing for salad or for a sub sandwich. I always add olives, you can make it into whatever salad or use whatever toppings you like!"
+   ],
+   "notes": [
+    "https://smilesandwich.com/2022/07/08/italian-grinder-salad/"
+   ],
+   "images": [],
+   "original": ""
+  },
+  {
    "slug": "creamy-tuscan-garlic-chicken",
    "title": "Creamy Tuscan Garlic Chicken",
    "from": [
