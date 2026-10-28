@@ -41,6 +41,63 @@
  },
  "recipes": [
   {
+   "slug": "kerrys-sour-dough-bread",
+   "title": "Kerrys Sour dough Bread",
+   "from": [
+    "Dad"
+   ],
+   "postedBy": "JacksonSearle",
+   "date": "2026-10-28",
+   "updated": "2026-10-28T17:00:45.050Z",
+   "categories": [
+    "Side Dishes",
+    "Breads"
+   ],
+   "makes": "1 round loaf",
+   "ingredients": [
+    {
+     "heading": null,
+     "items": [
+      "3 cups bread flour(360g)",
+      "1 1/2 tsp salt",
+      "1 cup (240g) active sour dough starter",
+      "1 1/4 cups (300ml) water"
+     ]
+    }
+   ],
+   "steps": [
+    {
+     "heading": null,
+     "items": [
+      "Mix all ingredients into a sticky dough.  I use a kitchen aid with bread hook. Rest 30 minutes.",
+      "Stir several times (20-30 seconds) with mixer every 30 minutes  for next 2 hours.",
+      "Cover and let ferment 6-8 hours on counter. Refrigerate covered, fermented dough overnight",
+      "Remove from refrigerator and shape into a round loaf  and let rest covered on counter for 2-3 hours.  This is where you can put in a bread proofing basket to get cool design.",
+      "Preheat oven with dutch oven and lid in oven to 450°F.",
+      "Put  loaf on parchment paper and score top. Bake in the preheated Dutch oven for 25 minutes covered, Then 20 more minutes uncovered.",
+      "Cool completely before slicing."
+     ]
+    }
+   ],
+   "tips": [
+    "Dad purchased new starter 233 Year- Old San Francisco Living Dough Sour Dough Starter."
+   ],
+   "notes": [],
+   "images": [
+    {
+     "src": "images/kerrys-sour-dough-bread-1793206845050-1.jpg",
+     "w": 1200,
+     "h": 1600
+    },
+    {
+     "src": "images/kerrys-sour-dough-bread-1793206845050-2.jpg",
+     "w": 1200,
+     "h": 1600
+    }
+   ],
+   "original": ""
+  },
+  {
    "slug": "sour-dough-bread",
    "title": "Sour Dough Bread",
    "from": [
