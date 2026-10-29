@@ -28,6 +28,7 @@
     edit: icon('<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/>'),
     filter: icon('<path d="M4 6h16M7 12h10M10 18h4"/>'),
     x: icon('<path d="M6 6l12 12M18 6L6 18"/>'),
+    copy: icon('<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/>'),
     link: icon('<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>'),
   };
   const PLACEHOLDER_COLORS = ["#c4532d", "#5d7a5c", "#b07d2b", "#7a5c8a", "#3f6e8c", "#a0483f", "#6b7a3a", "#8c5a3c"];
@@ -46,6 +47,19 @@
     t.hidden = false;
     clearTimeout(toast.timer);
     toast.timer = setTimeout(() => (t.hidden = true), ms);
+  }
+  async function copyText(text) {
+    try { await navigator.clipboard.writeText(text); return true; } catch { /* fall back below */ }
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.cssText = "position:fixed;top:0;left:0;opacity:0";
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch { ok = false; }
+    ta.remove();
+    return ok;
   }
   const store = {
     get(k, fallback) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fallback; } catch { return fallback; } },
@@ -340,7 +354,10 @@
 
         <div class="recipe-body">
           <section class="ingredients panel" aria-labelledby="h-ing">
-            <h2 id="h-ing">Ingredients</h2>
+            <div class="panel-head">
+              <h2 id="h-ing">Ingredients</h2>
+              ${ingredients ? `<button type="button" class="btn btn-small" id="copy-ingredients" title="Copies one ingredient per line. Paste into Reminders or Notes to get a shopping list.">${ICONS.copy} <span>Copy</span></button>` : ""}
+            </div>
             ${r.makes ? `<p class="makes">Makes ${esc(r.makes)}</p>` : ""}
             ${ingredients || "<p>—</p>"}
           </section>
@@ -367,7 +384,20 @@
 
     app.querySelector("#print").addEventListener("click", () => window.print());
     app.querySelector("#copy-link").addEventListener("click", async () => {
-      try { await navigator.clipboard.writeText(location.href); toast("Link copied"); } catch { toast(location.href, 6000); }
+      if (await copyText(location.href)) toast("Link copied"); else toast(location.href, 6000);
+    });
+    const copyIng = app.querySelector("#copy-ingredients");
+    if (copyIng) copyIng.addEventListener("click", async () => {
+      // One plain line per ingredient, no headings or bullets: Reminders makes each pasted line its own item.
+      const text = (r.ingredients || []).flatMap((g) => g.items).map((i) => i.replace(/\*+/g, "").trim()).filter(Boolean).join("\n");
+      const label = copyIng.querySelector("span");
+      if (await copyText(text)) {
+        label.textContent = "Copied";
+        toast("Ingredients copied. Paste them into a new reminder to get one item per ingredient.");
+        setTimeout(() => (label.textContent = "Copy"), 2500);
+      } else {
+        toast("Couldn't copy. Try selecting the list instead.");
+      }
     });
     app.querySelectorAll(".steps li").forEach((li) => li.addEventListener("click", (e) => {
       if (window.getSelection().toString()) return;
